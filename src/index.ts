@@ -127,9 +127,9 @@ client.on("message", async e => {
     }
 })
 
-client.on("request.friend.add", async e => {
-    e.approve()
-})
+// client.on("request.friend.add", async e => {
+//     e.approve()
+// })
 
 
 client.on("system.login.qrcode", function (e) {

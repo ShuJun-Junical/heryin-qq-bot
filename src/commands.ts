@@ -15,7 +15,7 @@ let client: Client = null
 let ban = null
 let questions = null
 export async function init(c: Client, b: Function) {
-    await data.connect(config_.database)
+    // await data.connect(config_.database)
     questions = new Questions(data.db)
     client = c
     ban = b
@@ -946,6 +946,10 @@ async function tran(args: MessageElem[], e: GroupMessageEvent | PrivateMessageEv
     })
 }
 
+async function server(args: MessageElem[], er: GroupMessageEvent | PrivateMessageEvent | DiscussMessageEvent, client: Client) {
+    
+}
+
 const interval = 60 * 60 * 1000
 setInterval(async () => {
     const now = (new Date()).getTime()
@@ -984,23 +988,23 @@ setInterval(async () => {
 }, interval)
 
 export const commands = {
-    help,
-    sign,
-    info,
-    rank,
-    config,
-    send,
-    image,
-    run,
-    lot,
-    give,
-    get,
-    lucky,
+    // help,
+    // sign,
+    // info,
+    // rank,
+    // config,
+    // send,
+    // image,
+    // run,
+    // lot,
+    // give,
+    // get,
+    // lucky,
     // rob,
-    hito,
+    // hito,
     // idi,
-    pixiv,
-    rd,
-    ag,
-    tran
+    // pixiv,
+    // rd,
+    // ag,
+    // tran
 }
